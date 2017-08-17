@@ -1,31 +1,108 @@
-.pict img{
-    width: 300px;
-    height: 300px;
-    border-radius: 200%;
+body {
+    position: absolute;
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    margin: 0;
+    border: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-flow: column nowrap;
 }
 
-
-body{
-    
-    font-family: Arial;
-    color: white;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
+#title {
+    order: 1;
+    flex: 0 0 auto;
 }
 
+.subtitle {
+    order: 2;
+    flex: 0 0 auto;
+}
 
-
-
-.icons img{
+#content {
+    order: 3;
+    flex: 1;
     
-    width: 120px;
-    height: 120px;
-    border-radius: 120%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#photo {
+    order: 1;
+    flex: 1;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: auto;
+}
+
+.thin {
+    margin: auto;
+    width: 50%;
+}
+
+@media (max-width: 1000px) {
+    .thin {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+#footer {
+    order: 2;
+    flex: 0 0 auto;
+    
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@media (max-height: 500px) {
+    #content {
+        flex-direction: row;
+    }
+    
+    #footer {
+        order: 1;
+        flex-direction: column;
+        width: 200px;
+    }
+    
+    #photo {
+        order: 2;
+    }
+}
+
+.subfooter {
+    order: 1;
+    flex: 1;
+}
+
+.img {
+    order: 1;
+    flex: 0 0 auto;
+    
+    height: 400px;
+    width: 400px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+div {
+    text-align: center;
+    border: 1px solid black;
 }
